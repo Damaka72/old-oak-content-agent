@@ -1,0 +1,38 @@
+name: Weekly Content Discovery
+
+on:
+  schedule:
+    # Runs every Monday at 9:00 AM UTC (adjust for your timezone)
+    - cron: '0 9 * * 1'
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  discover-content:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install anthropic
+      
+      - name: Run content discovery
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python content_discovery.py
+      
+      - name: Commit and push results
+        run: |
+          git config --global user.name 'Content Agent'
+          git config --global user.email 'agent@oldoaktown.com'
+          git add reviews/
+          git commit -m "Weekly content review - $(date +'%Y-%m-%d')" || echo "No changes"
+          git push
