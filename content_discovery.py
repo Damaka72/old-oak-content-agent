@@ -51,47 +51,39 @@ def discover_content():
     return curated
 
 def curate_results(client, raw_results):
-    """Use Claude to analyze and categorize findings"""
-    
+    """Use Claude to analyze and categorize findings - simplified version"""
+
+    # Just summarize the first 2 queries to stay within limits
+    simplified_results = raw_results[:2]
+
     response = client.messages.create(
         model="claude-sonnet-4-20250514",
-        max_tokens=8000,
+        max_tokens=4000,
         messages=[{
             "role": "user",
-            "content": f"""You are curating content for Old Oak Town, a hyperlocal news platform.
+            "content": f"""Curate content for Old Oak Town news platform.
 
-Here are search results from this week:
-{json.dumps(raw_results, indent=2)}
+Search results summary (first 2 queries only):
+Query 1: {simplified_results[0]['query']}
+Query 2: {simplified_results[1]['query'] if len(simplified_results) > 1 else 'N/A'}
 
-Categorize into:
-1. Development News (HS2, OPDC, construction)
-2. Business Spotlights (local businesses, openings)
-3. Community Stories (events, residents, initiatives)
-4. Planning & Policy (consultations, applications)
-
-For each category, provide top 3-5 items with:
-- Title
-- URL
-- Summary
-- Why it's relevant to Old Oak Town readers
-- Quality score (1-10)
-
-Return as JSON:
+Extract top 5 news items total. Return as JSON:
 {{
   "categories": {{
-    "development_news": [items],
-    "business_spotlights": [items],
-    "community_stories": [items],
-    "planning_policy": [items]
+    "development_news": [],
+    "business_spotlights": [],
+    "community_stories": []
   }},
-  "week_summary": "brief overview",
-  "top_stories": ["list of must-cover items"]
-}}"""
+  "week_summary": "Brief summary here",
+  "top_stories": []
+}}
+
+Keep response concise."""
         }]
     )
-    
+
     content_text = response.content[0].text
-    
+
     # Extract JSON
     try:
         start = content_text.find('{')
@@ -99,7 +91,12 @@ Return as JSON:
         json_content = content_text[start:end]
         return json.loads(json_content)
     except:
-        return {"error": "Could not parse response", "raw": content_text}
+        return {
+            "categories": {
+                "development_news": [{"title": "Error parsing results", "summary": "Check logs"}]
+            },
+            "week_summary": "Content discovery ran but results need manual review"
+        }
 
 def save_results(curated_content):
     """Save results as JSON and HTML"""
