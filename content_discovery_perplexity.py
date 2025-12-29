@@ -108,7 +108,7 @@ def search_with_perplexity(api_key, query, focus):
     }
 
     payload = {
-        "model": "sonar-small-online",  # Most cost-effective online model
+        "model": "sonar-small",  # Perplexity online search model (updated name)
         "messages": [
             {
                 "role": "system",
