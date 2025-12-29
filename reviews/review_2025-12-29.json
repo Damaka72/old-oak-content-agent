@@ -1,26 +1,184 @@
 {
-  "generated_at": "2025-12-29T00:55:22.869396",
+  "generated_at": "2025-12-29T01:24:44.761959",
   "date": "2025-12-29",
   "curated_content": {
     "categories": {
-      "development_news": [],
+      "development_news": [
+        {
+          "title": "First platforms for Britain's new high speed railway installed at Old Oak Common",
+          "url": "https://mediacentre.hs2.org.uk/news/first-platforms-for-britains-new-high-speed-railway-installed-at-old-oak-common-station",
+          "source": "HS2 Media Centre",
+          "date": "2025-05-29",
+          "summary": "HS2 engineers have begun installing the first platform slabs in the underground station box at Old Oak Common, marking the first tangible passenger infrastructure anywhere on the HS2 network. Six platforms are being built at the super-hub station to serve HS2's fleet of 400-metre trains.",
+          "category": "development_news",
+          "relevance": "This milestone represents a major step toward the station becoming operational, directly impacting future transport connectivity for Old Oak Common residents.",
+          "score": 9
+        },
+        {
+          "title": "Foundations complete for HS2's Old Oak Common high speed station",
+          "url": "https://mediacentre.hs2.org.uk/news/foundations-complete-for-hs2s-old-oak-common-high-speed-station",
+          "source": "HS2 Media Centre",
+          "date": "2025-02-10",
+          "summary": "The 850-metre-long underground station foundation has been completed using 76,000 cubic metres of concrete and 17,000 tonnes of reinforced steel. Construction began in April 2023 and required 91 separate concrete pours to complete the massive underground base.",
+          "category": "development_news",
+          "relevance": "This foundation completion enables the next crucial phase of station construction, bringing Old Oak Common closer to becoming a major transport hub.",
+          "score": 8
+        },
+        {
+          "title": "One Portal Way Mixed-Use Development Gets OPDC Green Light",
+          "url": "https://ukpropertyforums.com/revised-one-portal-way-application-approved-by-opdc/",
+          "source": "UK Property Forums",
+          "date": "2024-04-11",
+          "summary": "OPDC approved amended full planning permission for phase one of One Portal Way, Acton, including residential, office, hotel and commercial uses. The approval also covers outline permission for subsequent phases of this major mixed-use development.",
+          "category": "development_news",
+          "relevance": "This major regeneration project will significantly change the local landscape and bring new amenities to the area.",
+          "score": 8
+        },
+        {
+          "title": "HS2 at Old Oak Common 'to boost local economy by \u00a310bn'",
+          "url": "https://www.railtech.com/all/2025/03/04/hs2-at-old-oak-common-to-boost-local-economy-by-10bn-but-will-that-offset-soaring-costs-and-local-disruptions/",
+          "source": "RailTech",
+          "date": "2025-03-04",
+          "summary": "A new report suggests the HS2 station at Old Oak Common will generate \u00a310 billion in economic benefits for the local area over the next decade. However, concerns remain about construction disruption and the project's soaring overall costs.",
+          "category": "development_news",
+          "relevance": "This economic projection directly affects local residents and businesses, outlining potential benefits while acknowledging ongoing construction challenges.",
+          "score": 7
+        },
+        {
+          "title": "OPDC partners with Hemiko for innovative waste heat network serving 9,000+ homes",
+          "url": "https://hemiko.com/news/opdc-announces-hemiko-as-development-and-funding-partner-for-innovative-new-heat-network/",
+          "source": "Hemiko",
+          "date": "2025-03-31",
+          "summary": "OPDC announced Hemiko as development partner for the Old Oak and Park Royal Energy Network (OPEN), which will capture waste heat from local data centres to provide low-cost, low-carbon energy. This UK-first project will initially serve over 9,000 new homes and businesses, expanding to 25,000+ homes.",
+          "category": "development_news",
+          "relevance": "This innovative energy solution will provide affordable heating to thousands of Old Oak Common residents while advancing London's environmental goals.",
+          "score": 7
+        },
+        {
+          "title": "Mayor appoints new board members to OPDC as \u00a310bn scheme takes shape",
+          "url": "https://www.london.gov.uk/who-we-are/city-halls-partners/old-oak-and-park-royal-development-corporation-opdc/opdc-media-centre/opdc-press-releases/mayor-appoints-new-board-and-planning-committee-members-opdc-old-oak-scheme-takes-shape",
+          "source": "London City Hall",
+          "date": "2025-09-22",
+          "summary": "The Mayor of London appointed five new Board Members and one Planning Committee Member to OPDC, bringing senior regeneration expertise to the project. Procurement will launch later this year for a private sector partner to help deliver the flagship \u00a310bn development scheme.",
+          "category": "development_news",
+          "relevance": "New leadership appointments strengthen governance of West London's largest development project affecting thousands of future homes and jobs.",
+          "score": 6
+        },
+        {
+          "title": "New chief executive appointed to lead Old Oak and Park Royal development",
+          "url": "https://www.costar.com/article/1836034662/new-chief-executive-to-take-reins-at-mayors-old-oak-and-park-royal-development-corporation",
+          "source": "CoStar",
+          "date": "2025-04-16",
+          "summary": "Matthew Carpen has been appointed as OPDC's new chief executive, bringing experience from delivering 20,000 homes at Barking Riverside and securing over \u00a3300 million in investment. He will lead London's largest brownfield development around the new HS2 station.",
+          "category": "development_news",
+          "relevance": "New leadership brings proven experience in large-scale housing delivery to Old Oak Common's transformational development.",
+          "score": 6
+        }
+      ],
       "business_spotlights": [],
-      "community_stories": [],
-      "planning_policy": []
+      "community_stories": [
+        {
+          "title": "Old Oak West Masterplan Community Exhibition Scheduled for May 2025",
+          "url": "https://grandunionalliance.wixsite.com/grandunionalliance/updates",
+          "source": "Grand Union Alliance",
+          "date": "Recent",
+          "summary": "OPDC will hold an online exhibition on May 20th 2025 to display their vision for Old Oak West, showing how community feedback has shaped proposals. The session will explain next steps for delivering the Old Oak regeneration.",
+          "category": "community_stories",
+          "relevance": "This consultation gives residents a direct opportunity to see and influence major planning decisions for their area.",
+          "score": 5
+        }
+      ],
+      "planning_policy": [
+        {
+          "title": "OPDC Makes Compulsory Purchase Order for Old Oak Land Assembly",
+          "url": "https://www.london.gov.uk/who-we-are/city-halls-partners/old-oak-and-park-royal-development-corporation-opdc/old-oak-compulsory-purchase-order",
+          "source": "London City Hall",
+          "date": "2025-09-12",
+          "summary": "OPDC issued a Compulsory Purchase Order to acquire approximately 31 hectares of land needed for Old Oak regeneration, with most land owned by public sector stakeholders. This legal step is essential for delivering OPDC's comprehensive regeneration plans.",
+          "category": "planning_policy",
+          "relevance": "This affects local landowners and represents a critical step toward realizing the massive regeneration of Old Oak Common.",
+          "score": 8
+        },
+        {
+          "title": "OPDC Approves Major Portal Way Development After Committee Review",
+          "url": "https://grandunionalliance.wixsite.com/grandunionalliance/updates",
+          "source": "Grand Union Alliance",
+          "date": "2024-10-12",
+          "summary": "OPDC Planning Committee approved revised proposals from developers Aldau at 4 Portal Way and granted planning permission for Imperial College's application. These decisions represent significant high-density development approvals moving forward in the Old Oak area.",
+          "category": "planning_policy",
+          "relevance": "These approvals directly impact the scale and pace of development in residents' immediate area.",
+          "score": 7
+        },
+        {
+          "title": "OPDC Changes Planning Delegation Rules with Ealing Council",
+          "url": "https://www.london.gov.uk/who-we-are/city-halls-partners/old-oak-and-park-royal-development-corporation-opdc/planning/planning-applications",
+          "source": "London City Hall",
+          "date": "2024-05-20",
+          "summary": "From April 1st 2024, OPDC changed which planning applications are delegated to Ealing Council. Only applications to discharge or vary conditions on existing Ealing-issued permissions will now be delegated.",
+          "category": "planning_policy",
+          "relevance": "This policy change affects how planning applications are processed for residents in the Ealing part of Old Oak Common.",
+          "score": 6
+        },
+        {
+          "title": "OPDC Adopts New Public Realm and Green Infrastructure Planning Guidelines",
+          "url": "https://www.london.gov.uk/who-we-are/city-halls-partners/old-oak-and-park-royal-development-corporation-opdc/planning-policy/opdc-planning-policy",
+          "source": "London City Hall",
+          "date": "2024-08-20",
+          "summary": "OPDC's Board adopted the Public Realm and Green Infrastructure Supplementary Planning Document on June 13th 2024. This provides new planning guidance for developers on public spaces and green infrastructure standards.",
+          "category": "planning_policy",
+          "relevance": "These new guidelines will determine the quality of public spaces and green areas in future developments affecting residents' daily environment.",
+          "score": 6
+        }
+      ]
     },
-    "week_summary": "This week's content discovery found 0 newsworthy stories across 0 categories. ",
-    "top_stories": [],
-    "top_stories_full": [],
-    "total_items": 0,
-    "stats": {
-      "total_items": 0,
-      "by_category": {
-        "development_news": 0,
-        "business_spotlights": 0,
-        "community_stories": 0,
-        "planning_policy": 0
+    "week_summary": "This week's content discovery found 12 newsworthy stories across 3 categories. Average quality score: 6.9/10. ",
+    "top_stories": [
+      "First platforms for Britain's new high speed railway installed at Old Oak Common",
+      "Foundations complete for HS2's Old Oak Common high speed station",
+      "OPDC Makes Compulsory Purchase Order for Old Oak Land Assembly"
+    ],
+    "top_stories_full": [
+      {
+        "title": "First platforms for Britain's new high speed railway installed at Old Oak Common",
+        "url": "https://mediacentre.hs2.org.uk/news/first-platforms-for-britains-new-high-speed-railway-installed-at-old-oak-common-station",
+        "source": "HS2 Media Centre",
+        "date": "2025-05-29",
+        "summary": "HS2 engineers have begun installing the first platform slabs in the underground station box at Old Oak Common, marking the first tangible passenger infrastructure anywhere on the HS2 network. Six platforms are being built at the super-hub station to serve HS2's fleet of 400-metre trains.",
+        "category": "development_news",
+        "relevance": "This milestone represents a major step toward the station becoming operational, directly impacting future transport connectivity for Old Oak Common residents.",
+        "score": 9
       },
-      "average_score": 0
+      {
+        "title": "Foundations complete for HS2's Old Oak Common high speed station",
+        "url": "https://mediacentre.hs2.org.uk/news/foundations-complete-for-hs2s-old-oak-common-high-speed-station",
+        "source": "HS2 Media Centre",
+        "date": "2025-02-10",
+        "summary": "The 850-metre-long underground station foundation has been completed using 76,000 cubic metres of concrete and 17,000 tonnes of reinforced steel. Construction began in April 2023 and required 91 separate concrete pours to complete the massive underground base.",
+        "category": "development_news",
+        "relevance": "This foundation completion enables the next crucial phase of station construction, bringing Old Oak Common closer to becoming a major transport hub.",
+        "score": 8
+      },
+      {
+        "title": "OPDC Makes Compulsory Purchase Order for Old Oak Land Assembly",
+        "url": "https://www.london.gov.uk/who-we-are/city-halls-partners/old-oak-and-park-royal-development-corporation-opdc/old-oak-compulsory-purchase-order",
+        "source": "London City Hall",
+        "date": "2025-09-12",
+        "summary": "OPDC issued a Compulsory Purchase Order to acquire approximately 31 hectares of land needed for Old Oak regeneration, with most land owned by public sector stakeholders. This legal step is essential for delivering OPDC's comprehensive regeneration plans.",
+        "category": "planning_policy",
+        "relevance": "This affects local landowners and represents a critical step toward realizing the massive regeneration of Old Oak Common.",
+        "score": 8
+      }
+    ],
+    "total_items": 12,
+    "stats": {
+      "total_items": 12,
+      "by_category": {
+        "development_news": 7,
+        "business_spotlights": 0,
+        "community_stories": 1,
+        "planning_policy": 4
+      },
+      "average_score": 6.916666666666667
     }
   },
   "search_summary": [
@@ -50,13 +208,13 @@
     }
   ],
   "statistics": {
-    "total_items": 0,
+    "total_items": 12,
     "by_category": {
-      "development_news": 0,
+      "development_news": 7,
       "business_spotlights": 0,
-      "community_stories": 0,
-      "planning_policy": 0
+      "community_stories": 1,
+      "planning_policy": 4
     },
-    "average_score": 0
+    "average_score": 6.916666666666667
   }
 }
