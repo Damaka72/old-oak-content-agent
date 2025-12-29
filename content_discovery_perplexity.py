@@ -415,9 +415,11 @@ Only include stories that are genuinely newsworthy and relevant to Old Oak Commo
 
 
 def save_results(curated_content, raw_search_results):
-    """Save results as JSON and HTML"""
+    """Save results as JSON and HTML with unique timestamp"""
 
-    timestamp = datetime.now().strftime("%Y-%m-%d")
+    # Use full timestamp to avoid overwriting files from same day
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    date_only = datetime.now().strftime("%Y-%m-%d")
     os.makedirs("reviews", exist_ok=True)
 
     # Save comprehensive JSON
@@ -426,7 +428,8 @@ def save_results(curated_content, raw_search_results):
     with open(json_filename, 'w') as f:
         json.dump({
             "generated_at": datetime.now().isoformat(),
-            "date": timestamp,
+            "date": date_only,
+            "timestamp": timestamp,
             "curated_content": curated_content,
             "search_summary": [
                 {
@@ -441,7 +444,7 @@ def save_results(curated_content, raw_search_results):
 
     print(f"\n💾 Saved: {json_filename}")
 
-    # Create HTML review
+    # Create HTML review (with timestamp in filename)
     create_html_review(curated_content, timestamp)
 
 
