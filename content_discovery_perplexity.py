@@ -73,7 +73,9 @@ def discover_content():
             all_search_results.append({
                 "query": query,
                 "category": search_item["category"],
+                "focus": search_item["focus"],  # Fixed: Add missing focus field
                 "results": [],
+                "result_count": 0,
                 "error": str(e)
             })
 
@@ -106,7 +108,7 @@ def search_with_perplexity(api_key, query, focus):
     }
 
     payload = {
-        "model": "llama-3.1-sonar-small-128k-online",  # Most cost-effective online model
+        "model": "sonar-small-online",  # Most cost-effective online model
         "messages": [
             {
                 "role": "system",
@@ -135,20 +137,29 @@ Format as a clear list. Prioritize local London news sources and official announ
         "return_related_questions": False
     }
 
-    response = requests.post(url, json=payload, headers=headers, timeout=60)
-    response.raise_for_status()
+    try:
+        response = requests.post(url, json=payload, headers=headers, timeout=60)
+        response.raise_for_status()
+        data = response.json()
 
-    data = response.json()
+        # Extract the response and citations
+        content = data['choices'][0]['message']['content']
+        citations = data.get('citations', [])
 
-    # Extract the response and citations
-    content = data['choices'][0]['message']['content']
-    citations = data.get('citations', [])
-
-    return {
-        "content": content,
-        "citations": citations,
-        "source": "perplexity"
-    }
+        return {
+            "content": content,
+            "citations": citations,
+            "source": "perplexity"
+        }
+    except requests.exceptions.HTTPError as e:
+        # Provide detailed error message for HTTP errors
+        error_detail = ""
+        try:
+            error_data = response.json()
+            error_detail = f": {error_data.get('error', {}).get('message', str(e))}"
+        except:
+            error_detail = f": {str(e)}"
+        raise Exception(f"Perplexity API error{error_detail}")
 
 
 def search_with_claude(client, query, focus):
