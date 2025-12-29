@@ -5,6 +5,19 @@ import time
 from datetime import datetime
 import requests
 
+# Import additional content sources
+try:
+    from rss_monitor import fetch_rss_feeds, categorize_rss_items, format_rss_for_curation
+    RSS_AVAILABLE = True
+except ImportError:
+    RSS_AVAILABLE = False
+
+try:
+    from planning_scraper import check_business_planning_applications, format_planning_for_curation
+    PLANNING_AVAILABLE = True
+except ImportError:
+    PLANNING_AVAILABLE = False
+
 def discover_content():
     """Search for Old Oak Common content using Perplexity + Claude curation"""
 
@@ -109,6 +122,34 @@ def discover_content():
             time.sleep(wait_time)
 
     print(f"✅ Search complete!\n")
+
+    # Fetch RSS feeds if available
+    if RSS_AVAILABLE:
+        try:
+            print("📡 Fetching RSS feeds from local sources...")
+            rss_items = fetch_rss_feeds()
+            if rss_items:
+                rss_formatted = format_rss_for_curation(rss_items)
+                all_search_results.extend(rss_formatted)
+                print(f"   ✓ Added {len(rss_items)} items from RSS feeds\n")
+            else:
+                print(f"   ○ No relevant RSS items found\n")
+        except Exception as e:
+            print(f"   ✗ RSS fetch error: {str(e)[:50]}\n")
+
+    # Fetch planning applications if available
+    if PLANNING_AVAILABLE:
+        try:
+            print("📋 Checking planning applications...")
+            planning_items = check_business_planning_applications()
+            if planning_items:
+                planning_formatted = format_planning_for_curation(planning_items)
+                all_search_results.extend(planning_formatted)
+                print(f"   ✓ Added {len(planning_items)} planning applications\n")
+            else:
+                print(f"   ○ No relevant planning applications found\n")
+        except Exception as e:
+            print(f"   ✗ Planning fetch error: {str(e)[:50]}\n")
 
     # Wait a bit to avoid rate limits
     print("⏳ Waiting 10s before curation (rate limit protection)...")
