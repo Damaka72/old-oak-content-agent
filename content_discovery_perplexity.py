@@ -22,27 +22,37 @@ def discover_content():
         # TODO: Re-enable once correct model name is confirmed
         # use_perplexity = True
 
-    # Focused queries for Old Oak Town news
+    # Targeted queries focusing on specific local sources
     search_queries = [
         {
-            "query": "Old Oak Common HS2 station construction news updates 2025",
+            "query": "site:ealingtimes.co.uk OR site:getwestlondon.co.uk Old Oak Common Park Royal 2025",
             "category": "development_news",
-            "focus": "HS2 station progress, construction milestones, delays, opening dates"
+            "focus": "HS2, OPDC, construction updates from local newspapers"
         },
         {
-            "query": "Park Royal OPDC regeneration development London 2025",
-            "category": "development_news",
-            "focus": "OPDC projects, Park Royal redevelopment, housing developments"
-        },
-        {
-            "query": "Old Oak Common local business openings new shops restaurants",
-            "category": "business_spotlights",
-            "focus": "New businesses, closures, local business news"
-        },
-        {
-            "query": "Old Oak Common OPDC planning applications consultations",
+            "query": "site:opdc.london.gov.uk OR site:ealing.gov.uk news updates Old Oak Park Royal",
             "category": "planning_policy",
-            "focus": "Planning applications, public consultations, policy changes"
+            "focus": "Official OPDC and council announcements, planning applications"
+        },
+        {
+            "query": "\"Old Oak\" OR \"Park Royal\" new business opening shop restaurant cafe 2024 2025 London",
+            "category": "business_spotlights",
+            "focus": "New business openings, local shops, restaurants, cafes"
+        },
+        {
+            "query": "site:parkroyalbusiness.com OR \"Park Royal Business Group\" news events",
+            "category": "business_spotlights",
+            "focus": "Business community news, Park Royal businesses"
+        },
+        {
+            "query": "\"Old Oak Common\" OR \"Old Oak station\" HS2 site:hs2.org.uk OR site:networkrail.co.uk",
+            "category": "development_news",
+            "focus": "Official HS2 and Network Rail updates"
+        },
+        {
+            "query": "Old Oak Common community events residents forum 2025",
+            "category": "community_stories",
+            "focus": "Community events, resident groups, local initiatives"
         }
     ]
 
