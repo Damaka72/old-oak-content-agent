@@ -54,9 +54,18 @@ def discover_content():
 
         try:
             if use_perplexity:
-                search_results = search_with_perplexity(perplexity_api_key, query, search_item["focus"])
+                try:
+                    search_results = search_with_perplexity(perplexity_api_key, query, search_item["focus"])
+                    search_source = "Perplexity"
+                except Exception as perplexity_error:
+                    # Fallback to Claude if Perplexity fails
+                    print(f"   ⚠️  Perplexity failed: {str(perplexity_error)[:100]}")
+                    print(f"   🔄 Falling back to Claude web search...")
+                    search_results = search_with_claude(anthropic_client, query, search_item["focus"])
+                    search_source = "Claude (fallback)"
             else:
                 search_results = search_with_claude(anthropic_client, query, search_item["focus"])
+                search_source = "Claude"
 
             all_search_results.append({
                 "query": query,
@@ -66,14 +75,14 @@ def discover_content():
                 "result_count": len(search_results) if isinstance(search_results, list) else 1
             })
 
-            print(f"   ✓ Found content (using {'Perplexity' if use_perplexity else 'Claude'})")
+            print(f"   ✓ Found content (using {search_source})")
 
         except Exception as e:
             print(f"   ✗ Error: {str(e)}")
             all_search_results.append({
                 "query": query,
                 "category": search_item["category"],
-                "focus": search_item["focus"],  # Fixed: Add missing focus field
+                "focus": search_item["focus"],
                 "results": [],
                 "result_count": 0,
                 "error": str(e)
@@ -108,7 +117,7 @@ def search_with_perplexity(api_key, query, focus):
     }
 
     payload = {
-        "model": "sonar-small-online",  # Most cost-effective online model
+        "model": "sonar-small",  # Perplexity online search model (updated name)
         "messages": [
             {
                 "role": "system",
