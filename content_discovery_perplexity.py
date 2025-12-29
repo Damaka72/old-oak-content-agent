@@ -12,11 +12,15 @@ def discover_content():
     perplexity_api_key = os.environ.get("PERPLEXITY_API_KEY")
 
     if not perplexity_api_key:
-        print("⚠️  PERPLEXITY_API_KEY not found, falling back to Claude web search")
+        print("⚠️  PERPLEXITY_API_KEY not found, using Claude web search")
         use_perplexity = False
     else:
-        print("✅ Using Perplexity for web search")
-        use_perplexity = True
+        # Temporarily disable Perplexity due to model name issues
+        print("⚠️  Perplexity temporarily disabled (model name issues)")
+        print("    Using Claude web search instead")
+        use_perplexity = False
+        # TODO: Re-enable once correct model name is confirmed
+        # use_perplexity = True
 
     # Focused queries for Old Oak Town news
     search_queries = [
@@ -95,6 +99,10 @@ def discover_content():
             time.sleep(wait_time)
 
     print(f"✅ Search complete!\n")
+
+    # Wait a bit to avoid rate limits
+    print("⏳ Waiting 10s before curation (rate limit protection)...")
+    time.sleep(10)
 
     # Curate with Claude
     print("🎯 Curating content with Claude AI...")
