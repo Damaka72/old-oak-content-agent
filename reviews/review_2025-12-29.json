@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-29T00:33:08.937157",
+  "generated_at": "2025-12-29T00:55:22.869396",
   "date": "2025-12-29",
   "curated_content": {
     "categories": {
@@ -27,25 +27,25 @@
     {
       "query": "Old Oak Common HS2 station construction news updates 2025",
       "category": "development_news",
-      "source": "unknown",
+      "source": "claude",
       "citations_count": 0
     },
     {
       "query": "Park Royal OPDC regeneration development London 2025",
       "category": "development_news",
-      "source": "unknown",
+      "source": "claude",
       "citations_count": 0
     },
     {
       "query": "Old Oak Common local business openings new shops restaurants",
       "category": "business_spotlights",
-      "source": "unknown",
+      "source": "claude",
       "citations_count": 0
     },
     {
       "query": "Old Oak Common OPDC planning applications consultations",
       "category": "planning_policy",
-      "source": "unknown",
+      "source": "claude",
       "citations_count": 0
     }
   ],
