@@ -1,6 +1,7 @@
 import anthropic
 import json
 import os
+import time
 from datetime import datetime
 
 def discover_content():
@@ -19,9 +20,9 @@ def discover_content():
     
     print("🔍 Starting content discovery...")
     
-    for query in search_queries:
+    for i, query in enumerate(search_queries):
         print(f"Searching: {query}")
-        
+
         response = client.messages.create(
             model="claude-sonnet-4-20250514",
             max_tokens=4000,
@@ -29,16 +30,21 @@ def discover_content():
             messages=[{
                 "role": "user",
                 "content": f"""Search for: {query}
-                
+
                 Find recent news articles, announcements, and updates.
                 Return: title, URL, source, date, and brief summary for each result."""
             }]
         )
-        
+
         all_results.append({
             "query": query,
             "response": str(response.content)
         })
+
+        # Add delay between searches to avoid rate limits (except after last query)
+        if i < len(search_queries) - 1:
+            print("⏳ Waiting 20s to avoid rate limits...")
+            time.sleep(20)
     
     print("✅ Search complete! Now curating...")
     
