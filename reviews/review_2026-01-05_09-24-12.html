@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Oak Town Content Review - 2026-01-05_09-24-12</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #F5F5DC 0%, #E8E8D0 100%);
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #2D5016 0%, #3a6b1c 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 { font-size: 32px; margin-bottom: 8px; }
+        .header .date { font-size: 16px; opacity: 0.9; }
+
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            background: #fff8e7;
+            padding: 25px;
+            border-bottom: 3px solid #2D5016;
+            flex-wrap: wrap;
+        }
+        .stat {
+            text-align: center;
+            padding: 10px 20px;
+        }
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #2D5016;
+            display: block;
+        }
+        .stat-label {
+            font-size: 13px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .summary {
+            background: #fffef9;
+            padding: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .summary h2 {
+            color: #2D5016;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .top-stories {
+            background: linear-gradient(135deg, #fff8e7 0%, #fffef9 100%);
+            padding: 30px;
+            margin: 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .top-stories h2 {
+            color: #2D5016;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .top-story {
+            background: white;
+            border-left: 5px solid #FFD700;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .top-story-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2D5016;
+            margin-bottom: 10px;
+        }
+        .top-story-meta {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .top-story-summary {
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .category {
+            padding: 30px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .category:last-child { border-bottom: none; }
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .category-header h2 {
+            color: #8B4513;
+            font-size: 24px;
+            margin: 0;
+            flex: 1;
+        }
+        .category-count {
+            background: #2D5016;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .item {
+            background: #fafafa;
+            border-left: 4px solid #2D5016;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        .item:hover {
+            background: #f0f0f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateX(4px);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 12px;
+            gap: 15px;
+        }
+        .item-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2D5016;
+            flex: 1;
+            line-height: 1.3;
+        }
+
+        .score {
+            background: #2D5016;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 60px;
+            text-align: center;
+        }
+        .score.high { background: #2D5016; }
+        .score.medium { background: #8B4513; }
+        .score.low { background: #999; }
+
+        .item-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        .item-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .item-summary {
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .item-relevance {
+            background: #fff8e7;
+            border-left: 3px solid #FFD700;
+            padding: 12px 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .item-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #2D5016;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 16px;
+            background: #f0f0f0;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .item-link:hover {
+            background: #2D5016;
+            color: white;
+        }
+
+        .empty-category {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-style: italic;
+        }
+
+        .footer {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📰 Old Oak Town Content Review</h1>
+            <div class="date">Week of 2026-01-05_09-24-12</div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Stories Found</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">0.0</span>
+                <span class="stat-label">Avg Quality Score</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Active Categories</span>
+            </div>
+        </div>
+
+        <div class="summary">
+            <h2>📋 Week Summary</h2>
+            <p>This week's content discovery found 0 newsworthy stories across 0 categories. </p>
+        </div>
+
+        <div class="category">
+            <div class="category-header">
+                <h2>🏗️ Development News</h2>
+                <span class="category-count">0 items</span>
+            </div>
+
+            <div class="empty-category">No stories found in this category this week</div>
+
+        </div>
+
+        <div class="category">
+            <div class="category-header">
+                <h2>🏪 Business Spotlights</h2>
+                <span class="category-count">0 items</span>
+            </div>
+
+            <div class="empty-category">No stories found in this category this week</div>
+
+        </div>
+
+        <div class="category">
+            <div class="category-header">
+                <h2>👥 Community Stories</h2>
+                <span class="category-count">0 items</span>
+            </div>
+
+            <div class="empty-category">No stories found in this category this week</div>
+
+        </div>
+
+        <div class="category">
+            <div class="category-header">
+                <h2>📋 Planning & Policy</h2>
+                <span class="category-count">0 items</span>
+            </div>
+
+            <div class="empty-category">No stories found in this category this week</div>
+
+        </div>
+
+        <div class="footer">
+            Generated on 2026-01-05 at 09:24 • Old Oak Town Content Agent • Powered by Perplexity + Claude
+        </div>
+    </div>
+</body>
+</html>
