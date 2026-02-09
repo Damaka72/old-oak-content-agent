@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-02-09T09:53:21.277394",
+  "date": "2026-02-09",
+  "timestamp": "2026-02-09_09-53-21",
+  "curated_content": {
+    "categories": {
+      "development_news": [],
+      "business_spotlights": [],
+      "community_stories": [],
+      "planning_policy": []
+    },
+    "week_summary": "This week's content discovery found 0 newsworthy stories across 0 categories. ",
+    "top_stories": [],
+    "top_stories_full": [],
+    "total_items": 0,
+    "stats": {
+      "total_items": 0,
+      "by_category": {
+        "development_news": 0,
+        "business_spotlights": 0,
+        "community_stories": 0,
+        "planning_policy": 0
+      },
+      "average_score": 0
+    }
+  },
+  "search_summary": [
+    {
+      "query": "site:ealingtimes.co.uk OR site:getwestlondon.co.uk Old Oak Common Park Royal 2025",
+      "category": "development_news",
+      "source": "unknown",
+      "citations_count": 0
+    },
+    {
+      "query": "site:opdc.london.gov.uk OR site:ealing.gov.uk news updates Old Oak Park Royal",
+      "category": "planning_policy",
+      "source": "unknown",
+      "citations_count": 0
+    },
+    {
+      "query": "\"Old Oak\" OR \"Park Royal\" new business opening shop restaurant cafe 2024 2025 London",
+      "category": "business_spotlights",
+      "source": "unknown",
+      "citations_count": 0
+    },
+    {
+      "query": "site:parkroyalbusiness.com OR \"Park Royal Business Group\" news events",
+      "category": "business_spotlights",
+      "source": "unknown",
+      "citations_count": 0
+    },
+    {
+      "query": "\"Old Oak Common\" OR \"Old Oak station\" HS2 site:hs2.org.uk OR site:networkrail.co.uk",
+      "category": "development_news",
+      "source": "unknown",
+      "citations_count": 0
+    },
+    {
+      "query": "Old Oak Common community events residents forum 2025",
+      "category": "community_stories",
+      "source": "unknown",
+      "citations_count": 0
+    },
+    {
+      "query": "RSS: Ealing Times",
+      "category": "development_news",
+      "source": "rss",
+      "citations_count": 1
+    }
+  ],
+  "statistics": {
+    "total_items": 0,
+    "by_category": {
+      "development_news": 0,
+      "business_spotlights": 0,
+      "community_stories": 0,
+      "planning_policy": 0
+    },
+    "average_score": 0
+  }
+}
