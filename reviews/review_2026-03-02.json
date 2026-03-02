@@ -1,0 +1,30 @@
+{
+  "date": "2026-03-02",
+  "content": {
+    "error": "Unable to access search results",
+    "required_data": [
+      "Real-time search results from Query 1: Old Oak Common HS2 news last 7 days",
+      "Real-time search results from Query 2: Old Oak station construction update"
+    ],
+    "suggested_format": {
+      "categories": {
+        "development_news": [
+          "HS2 construction milestones",
+          "Planning updates"
+        ],
+        "business_spotlights": [
+          "Local business impacts",
+          "New investments"
+        ],
+        "community_stories": [
+          "Resident stories",
+          "Community events"
+        ]
+      },
+      "week_summary": "Would summarize actual search results",
+      "top_stories": [
+        "Would list 5 most relevant current stories"
+      ]
+    }
+  }
+}
