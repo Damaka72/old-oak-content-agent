@@ -1,0 +1,46 @@
+{
+  "date": "2026-03-09",
+  "content": {
+    "categories": {
+      "development_news": [
+        {
+          "title": "HS2 Old Oak Common Station Takes Shape as Major Milestone Reached",
+          "summary": "Construction crews complete key structural elements of the new super-hub station",
+          "date": "2024-01-15"
+        },
+        {
+          "title": "Elizabeth Line Integration Works Begin at Old Oak Common",
+          "summary": "Network Rail starts final phase connecting new HS2 station to existing Elizabeth Line services",
+          "date": "2024-01-13"
+        }
+      ],
+      "business_spotlights": [
+        {
+          "title": "Local Businesses Prepare for HS2 Economic Boost",
+          "summary": "Old Oak area retailers and services gear up for increased footfall from new transport links",
+          "date": "2024-01-14"
+        }
+      ],
+      "community_stories": [
+        {
+          "title": "Residents Voice Concerns Over Construction Noise Levels",
+          "summary": "Community meeting addresses ongoing impact of major infrastructure works on daily life",
+          "date": "2024-01-12"
+        },
+        {
+          "title": "Old Oak Common Nature Reserve Restoration Project Launched",
+          "summary": "Environmental initiative aims to create green spaces alongside new development",
+          "date": "2024-01-11"
+        }
+      ]
+    },
+    "week_summary": "Major progress on HS2 Old Oak Common station construction with structural milestones reached, while community adaptation and environmental considerations remain key local concerns.",
+    "top_stories": [
+      "HS2 Old Oak Common Station Takes Shape as Major Milestone Reached",
+      "Elizabeth Line Integration Works Begin at Old Oak Common",
+      "Local Businesses Prepare for HS2 Economic Boost",
+      "Residents Voice Concerns Over Construction Noise Levels",
+      "Old Oak Common Nature Reserve Restoration Project Launched"
+    ]
+  }
+}
